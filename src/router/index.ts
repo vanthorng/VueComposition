@@ -6,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/lesson/13', // Redirect home to the current lesson
+      redirect: '/lesson/14', // Redirect home to the current lesson
     },
     {
       path: '/lesson/1',
@@ -89,7 +89,12 @@ const router = createRouter({
       path: '/lesson/13/admin',
       name: 'lesson13-admin',
       component: () => import('../lessons/Lesson13.vue'),
-      meta: { requiresAuth: true }, // Mark route as requiring auth
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/lesson/14',
+      name: 'lesson14',
+      component: () => import('../lessons/Lesson14.vue'),
     },
   ],
 })
