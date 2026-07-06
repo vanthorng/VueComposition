@@ -8,28 +8,6 @@
     <nav class="navigation-bar">
       <span class="nav-title">Vue 3 Composition API Course</span>
       <div class="tab-group">
-        <RouterLink to="/lesson/1" class="tab-btn" active-class="active">L01: ref()</RouterLink>
-        <RouterLink to="/lesson/2" class="tab-btn" active-class="active">L02: Events</RouterLink>
-        <RouterLink to="/lesson/3" class="tab-btn" active-class="active"
-          >L03: computed()</RouterLink
-        >
-        <RouterLink to="/lesson/4" class="tab-btn" active-class="active">L04: watch()</RouterLink>
-        <RouterLink to="/lesson/5" class="tab-btn" active-class="active"
-          >L05: reactive()</RouterLink
-        >
-        <RouterLink to="/lesson/6" class="tab-btn" active-class="active">L06: Props</RouterLink>
-        <RouterLink to="/lesson/7" class="tab-btn" active-class="active"
-          >L07: Composables</RouterLink
-        >
-        <RouterLink to="/lesson/8" class="tab-btn" active-class="active">L08: Pinia</RouterLink>
-        <RouterLink to="/lesson/9" class="tab-btn" active-class="active">L09: Router</RouterLink>
-        <RouterLink to="/lesson/10" class="tab-btn" active-class="active">L10: Params</RouterLink>
-        <RouterLink to="/lesson/11" class="tab-btn" active-class="active">L11: Query</RouterLink>
-        <RouterLink to="/lesson/12" class="tab-btn" active-class="active"
-          >L12: Navigation</RouterLink
-        >
-        <RouterLink to="/lesson/13" class="tab-btn" active-class="active">L13: Guards</RouterLink>
-        <RouterLink to="/lesson/14" class="tab-btn" active-class="active">L14: Fetching</RouterLink>
         <RouterLink to="/lesson/15" class="tab-btn" active-class="active"
           >L15: API Composable</RouterLink
         >
