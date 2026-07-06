@@ -2,7 +2,63 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [],
+  routes: [
+    {
+      path: '/',
+      redirect: '/lesson/9', // Redirect home to the current lesson
+    },
+    {
+      path: '/lesson/1',
+      name: 'lesson1',
+      component: () => import('../lessons/Lesson01.vue'),
+    },
+    {
+      path: '/lesson/2',
+      name: 'lesson2',
+      component: () => import('../lessons/Lesson02.vue'),
+    },
+    {
+      path: '/lesson/3',
+      name: 'lesson3',
+      component: () => import('../lessons/Lesson03.vue'),
+    },
+    {
+      path: '/lesson/4',
+      name: 'lesson4',
+      component: () => import('../lessons/Lesson04.vue'),
+    },
+    {
+      path: '/lesson/5',
+      name: 'lesson5',
+      component: () => import('../lessons/Lesson05.vue'),
+    },
+    {
+      path: '/lesson/6',
+      name: 'lesson6',
+      component: () => import('../lessons/Lesson06.vue'),
+    },
+    {
+      path: '/lesson/7',
+      name: 'lesson7',
+      component: () => import('../lessons/Lesson07.vue'),
+    },
+    {
+      path: '/lesson/8',
+      name: 'lesson8',
+      component: () => import('../lessons/Lesson08.vue'),
+    },
+    {
+      path: '/lesson/9',
+      name: 'lesson9',
+      component: () => import('../lessons/Lesson09.vue'),
+    },
+    // Dynamic parameter route for Lesson 09 demonstration
+    {
+      path: '/lesson/9/user/:username',
+      name: 'lesson9-user',
+      component: () => import('../lessons/Lesson09.vue'), // Render the same view to inspect route params
+    },
+  ],
 })
 
 export default router

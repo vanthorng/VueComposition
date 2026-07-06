@@ -1,15 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import Lesson01 from './lessons/Lesson01.vue'
-import Lesson02 from './lessons/Lesson02.vue'
-import Lesson03 from './lessons/Lesson03.vue'
-import Lesson04 from './lessons/Lesson04.vue'
-import Lesson05 from './lessons/Lesson05.vue'
-import Lesson06 from './lessons/Lesson06.vue'
-import Lesson07 from './lessons/Lesson07.vue'
-import Lesson08 from './lessons/Lesson08.vue'
-
-const currentLesson = ref(8) // Default to the newest lesson
+// In a routed Vue app, we don't need to import all the lesson views here.
+// They are dynamically resolved and rendered by the <RouterView /> component.
 </script>
 
 <template>
@@ -17,42 +8,27 @@ const currentLesson = ref(8) // Default to the newest lesson
     <nav class="navigation-bar">
       <span class="nav-title">Vue 3 Composition API Course</span>
       <div class="tab-group">
-        <button @click="currentLesson = 1" :class="['tab-btn', { active: currentLesson === 1 }]">
-          Lesson 01: ref()
-        </button>
-        <button @click="currentLesson = 2" :class="['tab-btn', { active: currentLesson === 2 }]">
-          Lesson 02: Methods
-        </button>
-        <button @click="currentLesson = 3" :class="['tab-btn', { active: currentLesson === 3 }]">
-          Lesson 03: computed()
-        </button>
-        <button @click="currentLesson = 4" :class="['tab-btn', { active: currentLesson === 4 }]">
-          Lesson 04: watch()
-        </button>
-        <button @click="currentLesson = 5" :class="['tab-btn', { active: currentLesson === 5 }]">
-          Lesson 05: reactive()
-        </button>
-        <button @click="currentLesson = 6" :class="['tab-btn', { active: currentLesson === 6 }]">
-          Lesson 06: Props & Emits
-        </button>
-        <button @click="currentLesson = 7" :class="['tab-btn', { active: currentLesson === 7 }]">
-          Lesson 07: Composables
-        </button>
-        <button @click="currentLesson = 8" :class="['tab-btn', { active: currentLesson === 8 }]">
-          Lesson 08: Pinia Setup
-        </button>
+        <RouterLink to="/lesson/1" class="tab-btn" active-class="active">L01: ref()</RouterLink>
+        <RouterLink to="/lesson/2" class="tab-btn" active-class="active">L02: Events</RouterLink>
+        <RouterLink to="/lesson/3" class="tab-btn" active-class="active"
+          >L03: computed()</RouterLink
+        >
+        <RouterLink to="/lesson/4" class="tab-btn" active-class="active">L04: watch()</RouterLink>
+        <RouterLink to="/lesson/5" class="tab-btn" active-class="active"
+          >L05: reactive()</RouterLink
+        >
+        <RouterLink to="/lesson/6" class="tab-btn" active-class="active">L06: Props</RouterLink>
+        <RouterLink to="/lesson/7" class="tab-btn" active-class="active"
+          >L07: Composables</RouterLink
+        >
+        <RouterLink to="/lesson/8" class="tab-btn" active-class="active">L08: Pinia</RouterLink>
+        <RouterLink to="/lesson/9" class="tab-btn" active-class="active">L09: Router</RouterLink>
       </div>
     </nav>
 
+    <!-- RouterView acts as a slot where the active route's component is loaded -->
     <div class="content-container">
-      <Lesson01 v-if="currentLesson === 1" />
-      <Lesson02 v-else-if="currentLesson === 2" />
-      <Lesson03 v-else-if="currentLesson === 3" />
-      <Lesson04 v-else-if="currentLesson === 4" />
-      <Lesson05 v-else-if="currentLesson === 5" />
-      <Lesson06 v-else-if="currentLesson === 6" />
-      <Lesson07 v-else-if="currentLesson === 7" />
-      <Lesson08 v-else-if="currentLesson === 8" />
+      <RouterView />
     </div>
   </div>
 </template>
@@ -68,7 +44,7 @@ const currentLesson = ref(8) // Default to the newest lesson
 
 .navigation-bar {
   width: 100%;
-  max-width: 900px;
+  max-width: 950px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,25 +58,27 @@ const currentLesson = ref(8) // Default to the newest lesson
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #42d392, #a855f7);
+  background: linear-gradient(135deg, #42d392, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .tab-group {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
+  flex-wrap: wrap;
 }
 
 .tab-btn {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   color: #94a3b8;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 600;
   cursor: pointer;
+  text-decoration: none;
   transition: all 0.2s ease;
 }
 
@@ -133,10 +111,10 @@ const currentLesson = ref(8) // Default to the newest lesson
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .navigation-bar {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.25rem;
     align-items: center;
   }
 }
