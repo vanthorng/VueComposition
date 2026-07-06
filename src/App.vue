@@ -30,6 +30,9 @@
         >
         <RouterLink to="/lesson/13" class="tab-btn" active-class="active">L13: Guards</RouterLink>
         <RouterLink to="/lesson/14" class="tab-btn" active-class="active">L14: Fetching</RouterLink>
+        <RouterLink to="/lesson/15" class="tab-btn" active-class="active"
+          >L15: API Composable</RouterLink
+        >
       </div>
     </nav>
 
