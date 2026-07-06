@@ -28,6 +28,7 @@
         <RouterLink to="/lesson/12" class="tab-btn" active-class="active"
           >L12: Navigation</RouterLink
         >
+        <RouterLink to="/lesson/13" class="tab-btn" active-class="active">L13: Guards</RouterLink>
       </div>
     </nav>
 
