@@ -5,8 +5,9 @@ import Lesson02 from './lessons/Lesson02.vue'
 import Lesson03 from './lessons/Lesson03.vue'
 import Lesson04 from './lessons/Lesson04.vue'
 import Lesson05 from './lessons/Lesson05.vue'
+import Lesson06 from './lessons/Lesson06.vue'
 
-const currentLesson = ref(5) // Default to the newest lesson
+const currentLesson = ref(6) // Default to the newest lesson
 </script>
 
 <template>
@@ -29,6 +30,9 @@ const currentLesson = ref(5) // Default to the newest lesson
         <button @click="currentLesson = 5" :class="['tab-btn', { active: currentLesson === 5 }]">
           Lesson 05: reactive()
         </button>
+        <button @click="currentLesson = 6" :class="['tab-btn', { active: currentLesson === 6 }]">
+          Lesson 06: Props & Emits
+        </button>
       </div>
     </nav>
 
@@ -38,6 +42,7 @@ const currentLesson = ref(5) // Default to the newest lesson
       <Lesson03 v-else-if="currentLesson === 3" />
       <Lesson04 v-else-if="currentLesson === 4" />
       <Lesson05 v-else-if="currentLesson === 5" />
+      <Lesson06 v-else-if="currentLesson === 6" />
     </div>
   </div>
 </template>
