@@ -2,8 +2,9 @@
 import { ref } from 'vue'
 import Lesson01 from './lessons/Lesson01.vue'
 import Lesson02 from './lessons/Lesson02.vue'
+import Lesson03 from './lessons/Lesson03.vue'
 
-const currentLesson = ref(2) // Default to the newest lesson
+const currentLesson = ref(3) // Default to the newest lesson
 </script>
 
 <template>
@@ -17,12 +18,16 @@ const currentLesson = ref(2) // Default to the newest lesson
         <button @click="currentLesson = 2" :class="['tab-btn', { active: currentLesson === 2 }]">
           Lesson 02: Methods & Events
         </button>
+        <button @click="currentLesson = 3" :class="['tab-btn', { active: currentLesson === 3 }]">
+          Lesson 03: computed()
+        </button>
       </div>
     </nav>
 
     <div class="content-container">
       <Lesson01 v-if="currentLesson === 1" />
       <Lesson02 v-else-if="currentLesson === 2" />
+      <Lesson03 v-else-if="currentLesson === 3" />
     </div>
   </div>
 </template>
