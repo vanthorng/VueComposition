@@ -7,8 +7,9 @@ import Lesson04 from './lessons/Lesson04.vue'
 import Lesson05 from './lessons/Lesson05.vue'
 import Lesson06 from './lessons/Lesson06.vue'
 import Lesson07 from './lessons/Lesson07.vue'
+import Lesson08 from './lessons/Lesson08.vue'
 
-const currentLesson = ref(7) // Default to the newest lesson
+const currentLesson = ref(8) // Default to the newest lesson
 </script>
 
 <template>
@@ -37,6 +38,9 @@ const currentLesson = ref(7) // Default to the newest lesson
         <button @click="currentLesson = 7" :class="['tab-btn', { active: currentLesson === 7 }]">
           Lesson 07: Composables
         </button>
+        <button @click="currentLesson = 8" :class="['tab-btn', { active: currentLesson === 8 }]">
+          Lesson 08: Pinia Setup
+        </button>
       </div>
     </nav>
 
@@ -48,6 +52,7 @@ const currentLesson = ref(7) // Default to the newest lesson
       <Lesson05 v-else-if="currentLesson === 5" />
       <Lesson06 v-else-if="currentLesson === 6" />
       <Lesson07 v-else-if="currentLesson === 7" />
+      <Lesson08 v-else-if="currentLesson === 8" />
     </div>
   </div>
 </template>
