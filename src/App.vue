@@ -33,6 +33,9 @@
         <RouterLink to="/lesson/15" class="tab-btn" active-class="active"
           >L15: API Composable</RouterLink
         >
+        <RouterLink to="/lesson/16" class="tab-btn" active-class="active"
+          >L16: Validation</RouterLink
+        >
       </div>
     </nav>
 
