@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { isAuthenticated } from '../stores/auth'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,15 +13,6 @@ const router = createRouter({
       component: () => import('../lessons/Lesson16.vue'),
     },
   ],
-})
-
-// Global Before Navigation Guard
-router.beforeEach((to, from) => {
-  // If the target route requires authentication and user is logged out:
-  if (to.meta.requiresAuth && !isAuthenticated.value) {
-    // Redirect to the info page and pass target path in query
-    return { name: 'lesson13', query: { redirectedFrom: to.fullPath } }
-  }
 })
 
 export default router
