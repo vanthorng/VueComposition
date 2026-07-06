@@ -8,46 +8,6 @@ const router = createRouter({
       redirect: '/lesson/9', // Redirect home to the current lesson
     },
     {
-      path: '/lesson/1',
-      name: 'lesson1',
-      component: () => import('../lessons/Lesson01.vue'),
-    },
-    {
-      path: '/lesson/2',
-      name: 'lesson2',
-      component: () => import('../lessons/Lesson02.vue'),
-    },
-    {
-      path: '/lesson/3',
-      name: 'lesson3',
-      component: () => import('../lessons/Lesson03.vue'),
-    },
-    {
-      path: '/lesson/4',
-      name: 'lesson4',
-      component: () => import('../lessons/Lesson04.vue'),
-    },
-    {
-      path: '/lesson/5',
-      name: 'lesson5',
-      component: () => import('../lessons/Lesson05.vue'),
-    },
-    {
-      path: '/lesson/6',
-      name: 'lesson6',
-      component: () => import('../lessons/Lesson06.vue'),
-    },
-    {
-      path: '/lesson/7',
-      name: 'lesson7',
-      component: () => import('../lessons/Lesson07.vue'),
-    },
-    {
-      path: '/lesson/8',
-      name: 'lesson8',
-      component: () => import('../lessons/Lesson08.vue'),
-    },
-    {
       path: '/lesson/9',
       name: 'lesson9',
       component: () => import('../lessons/Lesson09.vue'),
