@@ -1,33 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import Lesson01 from './lessons/Lesson01.vue'
-import Lesson02 from './lessons/Lesson02.vue'
 import Lesson03 from './lessons/Lesson03.vue'
-
-const currentLesson = ref(3) // Default to the newest lesson
 </script>
 
 <template>
   <div class="app-container">
     <nav class="navigation-bar">
       <span class="nav-title">Vue 3 Composition API Course</span>
-      <div class="tab-group">
-        <button @click="currentLesson = 1" :class="['tab-btn', { active: currentLesson === 1 }]">
-          Lesson 01: ref() & Binding
-        </button>
-        <button @click="currentLesson = 2" :class="['tab-btn', { active: currentLesson === 2 }]">
-          Lesson 02: Methods & Events
-        </button>
-        <button @click="currentLesson = 3" :class="['tab-btn', { active: currentLesson === 3 }]">
-          Lesson 03: computed()
-        </button>
-      </div>
     </nav>
 
     <div class="content-container">
-      <Lesson01 v-if="currentLesson === 1" />
-      <Lesson02 v-else-if="currentLesson === 2" />
-      <Lesson03 v-else-if="currentLesson === 3" />
+      <Lesson03 />
     </div>
   </div>
 </template>
