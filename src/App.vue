@@ -23,6 +23,7 @@
         >
         <RouterLink to="/lesson/8" class="tab-btn" active-class="active">L08: Pinia</RouterLink>
         <RouterLink to="/lesson/9" class="tab-btn" active-class="active">L09: Router</RouterLink>
+        <RouterLink to="/lesson/10" class="tab-btn" active-class="active">L10: Params</RouterLink>
       </div>
     </nav>
 
