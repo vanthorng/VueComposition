@@ -5,7 +5,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/lesson/10', // Redirect home to the current lesson
+      redirect: '/lesson/11', // Redirect home to the current lesson
     },
     {
       path: '/lesson/1',
@@ -67,7 +67,12 @@ const router = createRouter({
       path: '/lesson/10/profile/:userId',
       name: 'lesson10-profile',
       component: () => import('../lessons/Lesson10.vue'),
-      props: true, // Automatically pass route.params as props to the component!
+      props: true,
+    },
+    {
+      path: '/lesson/11',
+      name: 'lesson11',
+      component: () => import('../lessons/Lesson11.vue'),
     },
   ],
 })
