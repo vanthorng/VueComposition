@@ -25,6 +25,9 @@
         <RouterLink to="/lesson/9" class="tab-btn" active-class="active">L09: Router</RouterLink>
         <RouterLink to="/lesson/10" class="tab-btn" active-class="active">L10: Params</RouterLink>
         <RouterLink to="/lesson/11" class="tab-btn" active-class="active">L11: Query</RouterLink>
+        <RouterLink to="/lesson/12" class="tab-btn" active-class="active"
+          >L12: Navigation</RouterLink
+        >
       </div>
     </nav>
 

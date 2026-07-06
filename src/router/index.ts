@@ -5,7 +5,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/lesson/11', // Redirect home to the current lesson
+      redirect: '/lesson/12', // Redirect home to the current lesson
     },
     {
       path: '/lesson/1',
@@ -73,6 +73,11 @@ const router = createRouter({
       path: '/lesson/11',
       name: 'lesson11',
       component: () => import('../lessons/Lesson11.vue'),
+    },
+    {
+      path: '/lesson/12',
+      name: 'lesson12',
+      component: () => import('../lessons/Lesson12.vue'),
     },
   ],
 })
