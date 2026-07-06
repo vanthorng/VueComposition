@@ -36,6 +36,9 @@
         <RouterLink to="/lesson/16" class="tab-btn" active-class="active"
           >L16: Validation</RouterLink
         >
+        <RouterLink to="/lesson/17" class="tab-btn" active-class="active"
+          >L17: LocalStorage</RouterLink
+        >
       </div>
     </nav>
 
